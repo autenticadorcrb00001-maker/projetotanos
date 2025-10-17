@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Extrato de Pagamentos - Elisa Nunes</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      background: linear-gradient(to bottom, #0052cc, #007bff);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+    }
+
+    .card {
+      background-color: #003b99;
+      color: white;
+      border-radius: 24px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+      width: 90%;
+      max-width: 380px;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .back-btn {
+      font-size: 24px;
+      font-weight: bold;
+      cursor: pointer;
+      color: white;
+      background-color: #003b99;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+
+    .back-btn:hover {
+      background-color: #0052cc;
+    }
+
+    @media (max-width: 400px) {
+      .card {
+        padding: 20px;
+        border-radius: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <!-- Header -->
+    <div class="flex items-center justify-between mb-6">
+      <!-- Botão voltar -->
+      <a href="index.html" class="back-btn">←</a>
+
+      <div class="flex-1 text-center font-semibold text-sm sm:text-base text-white">
+        Elisa Nunes
+      </div>
+      <div class="w-8"></div> <!-- Espaço para balancear o layout -->
+    </div>
+
+    <!-- Título -->
+    <div class="text-center mb-4">
+      <span class="bg-[#0bc15c] px-3 py-1 text-xs sm:text-sm rounded-full">📜 Extrato de Pagamentos</span>
+    </div>
+
+    <h2 class="text-center text-lg sm:text-xl font-semibold mb-4">Últimas movimentações</h2>
+
+    <!-- Extrato vazio -->
+    <div class="bg-[#0048b8] rounded-2xl p-6 flex flex-col items-center justify-center h-[250px]">
+      <div class="text-center">
+        <div class="text-5xl mb-3">📂</div>
+        <p class="text-gray-200 font-semibold text-sm sm:text-base">Nenhuma movimentação encontrada</p>
+        <p class="text-gray-300 text-xs sm:text-sm mt-1">Suas transações aparecerão aqui</p>
+      </div>
+    </div>
+
+    <!-- Rodapé -->
+    <div class="mt-8 text-center text-xs sm:text-sm text-gray-300">
+      Saldo total disponível: <strong>R$ 5.250,00</strong>
+    </div>
+  </div>
+
+</body>
+</html>

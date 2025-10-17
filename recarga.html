@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recarga de Celular - Elisa Nunes</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      background: linear-gradient(to bottom, #0052cc, #007bff);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+    }
+
+    .card {
+      background-color: #003b99;
+      color: white;
+      border-radius: 24px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+      width: 90%;
+      max-width: 380px;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    input::placeholder {
+      color: #6b7280;
+    }
+
+    select {
+      appearance: none;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      background-image: url("data:image/svg+xml;charset=UTF-8,<svg fill='white' height='18' viewBox='0 0 20 20' width='18' xmlns='http://www.w3.org/2000/svg'><path d='M7 7l3 3 3-3z'/></svg>");
+      background-repeat: no-repeat;
+      background-position: right 1rem center;
+      background-size: 1rem;
+    }
+
+    @media (max-width: 400px) {
+      .card {
+        padding: 20px;
+        border-radius: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <!-- Header -->
+    <div class="flex items-center justify-between mb-6">
+      <button id="backBtn" class="text-white text-xl font-bold">✕</button>
+      <div class="flex items-center gap-2">
+        <div class="bg-white text-[#003b99] font-bold rounded-full w-8 h-8 flex items-center justify-center">EN</div>
+        <span class="font-semibold text-sm sm:text-base">Elisa Nunes</span>
+      </div>
+    </div>
+
+    <!-- Título -->
+    <div class="text-center mb-4">
+      <span class="bg-[#0bc15c] px-3 py-1 text-xs sm:text-sm rounded-full">📱 Recarga de Celular</span>
+    </div>
+
+    <h2 class="text-center text-lg sm:text-xl font-semibold mb-4">Digite os dados da recarga</h2>
+
+    <!-- Campos -->
+    <div class="flex flex-col items-center space-y-4">
+      <input 
+        type="text" 
+        placeholder="Número do celular (DDD + número)"
+        class="w-full px-4 py-3 rounded-xl text-[#003b99] placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#00c3ff] text-sm sm:text-base"
+      >
+
+      <select 
+        class="w-full px-4 py-3 rounded-xl text-[#003b99] bg-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#00c3ff] text-sm sm:text-base">
+        <option value="" disabled selected>Selecione o valor da recarga</option>
+        <option>R$ 10,00</option>
+        <option>R$ 20,00</option>
+        <option>R$ 30,00</option>
+        <option>R$ 50,00</option>
+        <option>R$ 100,00</option>
+      </select>
+
+      <button 
+        class="mt-4 bg-[#00c3ff] hover:bg-[#00a6e6] text-white font-semibold px-6 py-3 rounded-xl w-full transition duration-200 text-sm sm:text-base">
+        Fazer Recarga
+      </button>
+    </div>
+
+    <!-- Rodapé -->
+    <div class="mt-8 text-center text-xs sm:text-sm text-gray-300">
+      Seu saldo disponível: <strong>R$ 5.250,00</strong>
+    </div>
+  </div>
+
+  <script>
+    // Botão voltar para index.html
+    document.getElementById('backBtn').addEventListener('click', function() {
+      window.location.href = 'index.html';
+    });
+  </script>
+
+</body>
+</html>

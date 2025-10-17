@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Meu Crédito — Elisa Nunes</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    :root{
+      --bg-start: #1462d8;
+      --bg-end: #0b3e86;
+      --muted: rgba(255,255,255,0.65);
+    }
+    body{
+      font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+      background: linear-gradient(180deg,#f3f6fb 0%, #e9eef7 100%);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .phone{
+      width: 360px;
+      max-width:90vw;
+      background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.02));
+      border-radius: 34px;
+      box-shadow: 0 18px 40px rgba(2,6,23,0.18), inset 0 1px 0 rgba(255,255,255,0.02);
+      overflow: hidden;
+      border: 2px solid rgba(255,255,255,0.03);
+    }
+    .screen{padding:18px;}
+    .chip{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border-radius:999px;background:rgba(255,255,255,0.06);backdrop-filter: blur(6px);}
+    .seg-bar{height:6px;border-radius:999px;background:linear-gradient(90deg,#24d06a,#ffd24a,#00b0ff);}
+    .glass-card{background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.02)); border:1px solid rgba(255,255,255,0.04); box-shadow: 0 6px 18px rgba(3,6,23,0.2); border-radius:14px}
+    .small-muted{color:var(--muted);font-size:13px}
+    a { text-decoration: none; color: inherit; }
+  </style>
+</head>
+<body>
+  <div class="phone">
+    <div class="screen bg-gradient-to-b from-[rgba(10,62,147,0.98)] to-[rgba(20,98,216,0.98)] p-5">
+
+      <!-- Cabeçalho -->
+      <div class="flex items-center justify-between mb-4">
+        <a href="index.html" class="w-8 h-8 flex items-center justify-center rounded-full bg-white/10 text-white/90 hover:bg-white/20 transition">←</a>
+        <div class="flex items-center gap-2 text-white">
+          <img src="https://ui-avatars.com/api/?name=Elisa+Nunes&background=ffffff&color=0b3e86&size=48" alt="avatar" class="w-8 h-8 rounded-full border border-white/30" />
+          <div class="text-sm font-semibold">Elisa Nunes</div>
+        </div>
+        <div class="w-8"></div>
+      </div>
+
+      <!-- Título -->
+      <div class="text-center mb-4">
+        <span class="bg-white/10 text-white px-4 py-1 text-sm rounded-full shadow-sm">💳 Meu Crédito</span>
+      </div>
+
+      <!-- Saldo disponível -->
+      <div class="text-center text-white mb-4">
+        <div class="text-xs opacity-80">SALDO TOTAL DISPONÍVEL</div>
+        <div class="text-4xl font-extrabold mt-2">R$ 5.250,00</div>
+        <div class="mt-3 seg-bar mx-auto w-11/12"></div>
+      </div>
+
+      <!-- Cartão com informações -->
+      <div class="glass-card p-5 text-white text-center mt-6">
+        <div class="text-lg font-semibold mb-1">Limite de Crédito</div>
+        <div class="text-2xl font-extrabold mb-2">R$ 7.000,00</div>
+        <div class="text-sm small-muted">Crédito disponível para uso imediato</div>
+      </div>
+
+      <!-- Opções -->
+      <div class="mt-6 grid grid-cols-2 gap-3">
+        <button class="py-3 bg-[#00c3ff]/90 hover:bg-[#00a6e6] text-white font-semibold rounded-xl shadow-sm transition">Usar Crédito</button>
+        <button class="py-3 bg-white/10 hover:bg-white/20 text-white font-semibold rounded-xl shadow-sm transition">Aumentar Limite</button>
+      </div>
+
+      <!-- Rodapé -->
+      <div class="mt-8 text-center text-xs small-muted">
+        Última atualização: <span class="opacity-80">16/10/2025 - 20:00</span>
+      </div>
+
+    </div>
+  </div>
+</body>
+</html>
